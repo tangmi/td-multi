@@ -3,24 +3,120 @@
 <head>
 	<title>SUPER D</title>
 	<style type="text/css">
-		html {
-			margin:0;
-			background: #b09b92;
-		}
+	@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,700);
 
-		#canvas {
-			background: url("media/logo.png");
-			width: 924px;
-			height: 235px;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			margin-left: -462px;
-			margin-top: -115px;
-		}
+	html,body {
+		background-color: #333;
+		color: #fff;
+		font-family: 'Titillium Web', sans-serif;
+		margin: 0;
+		padding: 0;
+		font-size: 12pt;
+	}
+
+	#main {
+		width: 640px;
+		margin: 0 auto;
+		line-height: 1.5em;
+		font-weight: 200;
+	}
+
+	h1 > small {
+		font-weight: 400;
+	}
+
+	h2 {
+		border-bottom: 2px solid white;
+	}
+
+	dt {
+		font-weight: 400;
+	}
+
+	a:link, a:visited {
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px dotted white;
+	}
+
+	a:hover, a:active {
+		border-bottom-style: dashed;
+	}
+
+	a#play {
+		padding: 5px 15px;
+		margin: 5px;
+		border-radius: 3px;
+		border:1px solid;
+	}
+	a#play:hover {
+		background-color: rgba(255,255,255,0.1);
+		text-decoration: underline;
+	}
+	a#play:active {
+		background-color: rgba(0,0,0,0.1);
+	}
+	a#play:after {
+		content: " \00BB ";
+	}
+
+	#canvas {
+		background: url("media/logo.png");
+		width: 924px;
+		height: 235px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -462px;
+		margin-top: -115px;
+	}
 	</style>
 </head>
 <body>
-	<a href="index.html"><div id="canvas"></div></a>
+	<!-- <a href="index.html"><div id="canvas"></div></a> -->
+	<div id="main">
+		<img src="media/superd.png" alt="">
+		<h1>FMP <small>A moonbase tower defense game</small></h1>
+		<h2>Play it now</h2>
+		<p>Go play FMP right here:</p>
+		<p><a href="index.html" id="play">Play FMP, by SUPER D</a></p>
+
+		<h2>How to play</h2>
+		<h3>Goal</h3>
+		<p>You, the Russian cosmonaut, must leave the moonbase by running around collecting enough moonrocket fuel (50 or more of the red/green drops). Watch out, the Russian moonzombies are also trying to leave the moonbase, but they don't understand the point of rocket ships, so they'll end up punching it until it explodes.</p>
+
+		<h3>Controls</h3>
+		<ul>
+			<li>Arrow keys - move the cosmonaut</li>
+			<li>(held) A, S, D, F - displays build cost of each tower in upper left</li>
+			<li>(held) Spacebar - enters build mode</li>
+			<li>(held) Spacebar + (pressed) A, S, D, F - builds the corrosponding tower in the area marked in build mode</li>
+		</ul>
+
+		<h3>Towers</h3>
+		<p>There are four buildable towers:</p>
+		<dl>
+			<dt>Pile O'Trash</dt>
+			<dd>This space trash has high defense and serves as a great distraction for the zombies from your zappy cannons</dd>
+
+			<dt>Zappy Cannon</dt>
+			<dd>This nuclear powered laser cannon shoots lasers and zombies because that's it's job. Very low defense.</dd>
+
+			<dt>Neutron Bomb</dt>
+			<dd>Also known as the "capitalist bomb", it has a short fuse and kills a lot of zombies around it.</dd>
+
+			<dt>Nuke</dt>
+			<dd>Kaboom and all the zombies die.</dd>
+		</dl>
+
+		<h2>Notes</h2>
+		<ul>
+			<li>There are three drops from zombies: wood (tan-brown colored), metal (purple-blue colored), and fuel (red-green colored)</li>
+			<li>There are two types of zombies; be on the lookout for the elusive bongo zombie!</li>
+			<li>Zombies teleport in from somewhere because we thought the teleporter animation was really cool.</li>
+			<li>FMP stands for "Fluid Moon Pounds", which is the unit of measurement we believe futuristic Russian cosmonauts will use whilst fighting Russian cosmozombies.</li>
+			<li>This was made at a 24-hour hackaton hosted by StudentRND: <a href="http://codeday.org/">CodeDay</a>. Check out <a href="http://seattle.codeday.org/teams.html">other teams that competed with us</a>!</li>
+		</ul>
+	</div>
 </body>
 </html>
